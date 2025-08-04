@@ -4,9 +4,12 @@ from PyQt6.QtWidgets import QApplication, QLabel, QWidget, QGridLayout, \
 import sys
 from datetime import datetime
 
-
+#cleaner code and reusable design
+#window = QWidget()  # A basic blank window
+#QWidget gives access to core UI features like size.positionb styling events
 class AgeCalculator(QWidget):
     def __init__(self):
+        #initilize so that when this file is called the window is opened automatically
         super().__init__()
         self.setWindowTitle("Age Calculator")
         grid = QGridLayout()
